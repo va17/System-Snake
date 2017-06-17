@@ -30,7 +30,8 @@ module snake_controller_module(
     input logic right_key_is_pressed,
     axi4s.slave request_interface,
     output snake::board_type game_board,
-    output snake::score_type score);
+    output snake::score_type score,
+    input wire [31:0]keycode );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
 
@@ -102,7 +103,9 @@ always @(posedge game_clock or negedge low_reset)
         CGS_WAIT_FOR_START:
             begin
                 // wait until a pushbutton is pressed until starting
-                if (any_key_is_pressed) begin
+                if (keycode == 8'h1C) begin
+                    current_game_state = CGS_GENERATE_SNACK;
+                end else if (any_key_is_pressed) begin
                     current_game_state = CGS_GENERATE_SNACK;
                 end
             end
@@ -299,6 +302,65 @@ always @(posedge game_clock or negedge low_reset)
             end
         CGS_GAME_END:
             begin
+                foreach (game_board[each_col,each_row]) begin
+                    game_board[each_col][each_row] = snake::BT_END;
+                end 
+                //Letter G
+                game_board[5][2] = snake::BT_SNACK;
+                game_board[6][2] = snake::BT_SNACK;
+                game_board[7][2] = snake::BT_SNACK;
+                game_board[8][2] = snake::BT_SNACK;
+                game_board[5][3] = snake::BT_SNACK;
+                game_board[5][4] = snake::BT_SNACK;
+                game_board[5][5] = snake::BT_SNACK;
+                game_board[5][6] = snake::BT_SNACK;
+                game_board[5][7] = snake::BT_SNACK;
+                game_board[5][8] = snake::BT_SNACK;
+                game_board[7][8] = snake::BT_SNACK;
+                game_board[8][8] = snake::BT_SNACK;
+                game_board[5][9] = snake::BT_SNACK;
+                game_board[8][9] = snake::BT_SNACK;
+                game_board[5][10] = snake::BT_SNACK;
+                game_board[8][10] = snake::BT_SNACK;
+                game_board[5][11] = snake::BT_SNACK;
+                game_board[8][11] = snake::BT_SNACK;
+                game_board[5][12] = snake::BT_SNACK;
+                game_board[6][12] = snake::BT_SNACK;
+                game_board[7][12] = snake::BT_SNACK;
+                game_board[8][12] = snake::BT_SNACK;
+                
+                //Letter O
+                game_board[10][2] = snake::BT_SNACK;
+                game_board[11][2] = snake::BT_SNACK;
+                game_board[12][2] = snake::BT_SNACK;
+                game_board[13][2] = snake::BT_SNACK;
+                game_board[14][2] = snake::BT_SNACK;
+                game_board[10][3] = snake::BT_SNACK;
+                game_board[10][4] = snake::BT_SNACK;
+                game_board[10][5] = snake::BT_SNACK;
+                game_board[10][6] = snake::BT_SNACK;
+                game_board[10][7] = snake::BT_SNACK;
+                game_board[10][8] = snake::BT_SNACK;
+                game_board[10][9] = snake::BT_SNACK;
+                game_board[10][10] = snake::BT_SNACK;
+                game_board[10][11] = snake::BT_SNACK;
+                game_board[10][12] = snake::BT_SNACK;
+                game_board[11][12] = snake::BT_SNACK;
+                game_board[12][12] = snake::BT_SNACK;
+                game_board[13][12] = snake::BT_SNACK;
+                game_board[14][12] = snake::BT_SNACK;
+                game_board[10][2] = snake::BT_SNACK;
+                game_board[14][3] = snake::BT_SNACK;
+                game_board[14][4] = snake::BT_SNACK;
+                game_board[14][5] = snake::BT_SNACK;
+                game_board[14][6] = snake::BT_SNACK;
+                game_board[14][7] = snake::BT_SNACK;
+                game_board[14][8] = snake::BT_SNACK;
+                game_board[14][9] = snake::BT_SNACK;
+                game_board[14][10] = snake::BT_SNACK;
+                game_board[14][11] = snake::BT_SNACK;
+                game_board[14][12] = snake::BT_SNACK;
+                
                 if (any_key_is_pressed) begin
                     current_game_state = CGS_INITIALIZE;
                 end
@@ -548,6 +610,7 @@ snake_controller_module snake_controller_inst(
     .request_interface(request_interface),
     .game_board(game_board));
 
+
 endmodule
 
 //module test_acquire_random(
@@ -575,6 +638,8 @@ endmodule
 //    .data_out(random_interface));
 
 //endmodule
+
+
 
 module acquire_random_position(
     input logic game_clock,

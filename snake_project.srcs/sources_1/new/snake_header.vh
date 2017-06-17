@@ -32,16 +32,21 @@ localparam integer SCORE_WIDTH = math::compute_log2(SCORE_MAX);
 localparam integer SCORE_BREAK_POINTS[MOVE_PERIODS_TOTAL] = '{1,2,3,4,8,16,32};
 
 typedef enum logic [1:0] {
-    BT_EMPTY,BT_SNAKE_BODY,BT_SNACK
+    BT_EMPTY,BT_SNAKE_BODY,BT_SNACK, BT_END
 } block_type;
 
 typedef enum logic [1:0] {
     DT_UP,DT_DOWN,DT_LEFT,DT_RIGHT
 } direction_type;
 
+//typedef struct packed {
+//    logic [LOC_COL_WIDTH-1:0] col;
+//    logic [LOC_ROW_WIDTH-1:0] row;
+//} loc_type;
+
 typedef struct packed {
-    logic [LOC_COL_WIDTH-1:0] col;
-    logic [LOC_ROW_WIDTH-1:0] row;
+    logic [7:0] col;
+    logic [7:0] row;
 } loc_type;
 
 typedef struct packed {
@@ -63,10 +68,11 @@ typedef logic [SCORE_WIDTH-1:0] score_type;
 typedef logic [7:0] anodes_type;
 typedef quotient#(score_type)::quotient_type quotient_type;
 
-localparam vga::pixel_type block_to_color[3] = '{
+localparam vga::pixel_type block_to_color[4] = '{
     '{0,0,0},            // BT_EMPTY
-    '{255,255,255},      // BT_SNAKE_BODY
-    '{0,255,0}           // BT_SNACK
+    '{0,255,0},      // BT_SNAKE_BODY
+    '{218,74,0},          // BT_SNACK
+    '{255,255,255}           // BT_END
 };
 
 localparam ssegment_type bcd_to_ssegment[10] = '{

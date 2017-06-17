@@ -44,6 +44,8 @@
 `include "snake_header.vh"
 
 module top_module(
+    input PS2_CLK,
+    input PS2_DATA,
     input logic raw_clock,
     output logic vga_horizontal_synch,
     output logic vga_vertical_synch,
@@ -71,6 +73,9 @@ vga::pixel_type vga_pixel;
 snake::score_type score;
 snake::ssegment_type ssegment;
 snake::anodes_type anode;
+
+reg CLK50MHZ=0;    
+wire [31:0]keycode;
 
 assign low_reset = 1;
 assign vga_red = vga_pixel.red[7:4];
@@ -141,6 +146,14 @@ score_module score_inst (
     .score(score),
     .ssegment(ssegment),
     .anode(anode));
+
+PS2Receiver keyboard (
+    .clk(raw_clock),
+    .game_clock(game_clock),
+    .kclk(PS2_CLK),
+    .kdata(PS2_DATA),
+    .keycodeout(keycode[31:0])
+    );
     
 snake_controller_module snake_controller_inst(
     .game_clock(game_clock),
@@ -151,8 +164,9 @@ snake_controller_module snake_controller_inst(
     .right_key_is_pressed(right_key_is_pressed),
     .request_interface(request_interface),
     .game_board(game_board),
-    .score(score));
-    
+    .score(score),
+    .keycode(keycode));
+
 endmodule
 
 
