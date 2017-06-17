@@ -32,7 +32,8 @@ module snake_controller_module(
     output snake::board_type game_board,
     output snake::score_type score,
     input wire [31:0]keycode,
-    input logic has_walls );
+    input logic has_walls,
+    input logic is_inverted );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
 
@@ -51,7 +52,7 @@ logic any_key_is_pressed;
 logic wall_collision;
 
 assign any_key_is_pressed = up_key_is_pressed|down_key_is_pressed|left_key_is_pressed|right_key_is_pressed;
-    
+   
 always @(posedge game_clock or negedge low_reset)
     if (!low_reset) begin
         request_interface.slave_reset();
@@ -196,19 +197,35 @@ always @(posedge game_clock or negedge low_reset)
                             if (up_key_is_pressed) begin
                                 new_direction = snake::DT_UP;
                             end else if (keycode[15:8] == 8'h1D) begin//w
-                                new_direction = snake::DT_UP;
+                                if (is_inverted == 1) begin
+                                    new_direction = snake::DT_DOWN;
+                                end else if (is_inverted == 0) begin
+                                    new_direction = snake::DT_UP;
+                                end
                             end else if (down_key_is_pressed) begin
                                 new_direction = snake::DT_DOWN;
                             end else if (keycode[15:8] == 8'h1B) begin//s
-                                new_direction = snake::DT_DOWN;
+                                if (is_inverted == 1) begin
+                                    new_direction = snake::DT_UP;
+                                end else if (is_inverted == 0) begin
+                                    new_direction = snake::DT_DOWN;
+                                end
                             end else if (left_key_is_pressed) begin
                                 new_direction = snake::DT_LEFT;
                             end else if (keycode[15:8] == 8'h1C) begin//a
-                                new_direction = snake::DT_LEFT;
+                                if (is_inverted == 1) begin
+                                    new_direction = snake::DT_RIGHT;
+                                end else if (is_inverted == 0) begin
+                                    new_direction = snake::DT_LEFT;
+                                end
                             end else if (right_key_is_pressed) begin
                                 new_direction = snake::DT_RIGHT;
                             end else if (keycode[15:8] == 8'h23) begin//d
-                                new_direction = snake::DT_RIGHT;
+                                if (is_inverted == 1) begin
+                                    new_direction = snake::DT_LEFT;
+                                end else if (is_inverted == 0) begin
+                                    new_direction = snake::DT_RIGHT;
+                                end
                             end
                             move_counter++;
                         end
@@ -238,7 +255,7 @@ always @(posedge game_clock or negedge low_reset)
                                 begin
                                     if (snake_body[body_pointer].col==0) begin
                                         wall_collision = 1;
-                                        snake_body[body_pointer].col = snake_body[body_pointer].row + snake::BOARD_WIDTH;
+                                        snake_body[body_pointer].col = snake_body[body_pointer].col + snake::BOARD_WIDTH;
                                     end 
                                     snake_body[body_pointer].col--;
                                 end
@@ -246,7 +263,7 @@ always @(posedge game_clock or negedge low_reset)
                                 begin
                                    if (snake_body[body_pointer].col==(snake::BOARD_WIDTH-1)) begin
                                         wall_collision = 1;
-                                        snake_body[body_pointer].col = snake_body[body_pointer].row - snake::BOARD_WIDTH;
+                                        snake_body[body_pointer].col = snake_body[body_pointer].col - snake::BOARD_WIDTH;
                                    end
                                     snake_body[body_pointer].col++;
                                 end
