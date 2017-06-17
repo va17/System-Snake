@@ -103,7 +103,7 @@ always @(posedge game_clock or negedge low_reset)
         CGS_WAIT_FOR_START:
             begin
                 // wait until a pushbutton is pressed until starting
-                if (keycode == 8'h1C) begin
+                if (keycode[15:8] == 8'h29) begin
                     current_game_state = CGS_GENERATE_SNACK;
                 end else if (any_key_is_pressed) begin
                     current_game_state = CGS_GENERATE_SNACK;
@@ -194,11 +194,19 @@ always @(posedge game_clock or negedge low_reset)
                         end else begin
                             if (up_key_is_pressed) begin
                                 new_direction = snake::DT_UP;
+                            end else if (keycode[15:8] == 8'h1D) begin//w
+                                new_direction = snake::DT_UP;
                             end else if (down_key_is_pressed) begin
+                                new_direction = snake::DT_DOWN;
+                            end else if (keycode[15:8] == 8'h1B) begin//s
                                 new_direction = snake::DT_DOWN;
                             end else if (left_key_is_pressed) begin
                                 new_direction = snake::DT_LEFT;
+                            end else if (keycode[15:8] == 8'h1C) begin//a
+                                new_direction = snake::DT_LEFT;
                             end else if (right_key_is_pressed) begin
+                                new_direction = snake::DT_RIGHT;
+                            end else if (keycode[15:8] == 8'h23) begin//d
                                 new_direction = snake::DT_RIGHT;
                             end
                             move_counter++;
@@ -361,7 +369,9 @@ always @(posedge game_clock or negedge low_reset)
                 game_board[14][11] = snake::BT_SNACK;
                 game_board[14][12] = snake::BT_SNACK;
                 
-                if (any_key_is_pressed) begin
+                if (keycode[15:8] == 8'h34) begin
+                    current_game_state = CGS_INITIALIZE;
+                end else if (any_key_is_pressed) begin
                     current_game_state = CGS_INITIALIZE;
                 end
             end

@@ -165,7 +165,7 @@ snake_controller_module snake_controller_inst(
     .request_interface(request_interface),
     .game_board(game_board),
     .score(score),
-    .keycode(keycode));
+    .keycode(keycode[31:0]));
 
 endmodule
 
