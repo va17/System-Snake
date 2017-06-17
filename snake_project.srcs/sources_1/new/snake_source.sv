@@ -31,7 +31,8 @@ module snake_controller_module(
     axi4s.slave request_interface,
     output snake::board_type game_board,
     output snake::score_type score,
-    input wire [31:0]keycode );
+    input wire [31:0]keycode,
+    input logic has_walls );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
 
@@ -219,26 +220,34 @@ always @(posedge game_clock or negedge low_reset)
                             case (current_direction)
                             snake::DT_UP:      
                                 begin
-                                    if (snake_body[body_pointer].row==0)
-                                        wall_collision = 1; 
+                                    if (snake_body[body_pointer].row==0) begin
+                                        wall_collision = 1;
+                                        snake_body[body_pointer].row = snake_body[body_pointer].row + snake::BOARD_HEIGHT;
+                                    end
                                     snake_body[body_pointer].row--;
                                 end
                             snake::DT_DOWN:
                                 begin
-                                    if (snake_body[body_pointer].row==(snake::BOARD_HEIGHT-1))    
+                                    if (snake_body[body_pointer].row==(snake::BOARD_HEIGHT-1))  begin    
                                         wall_collision = 1; 
+                                        snake_body[body_pointer].row = snake_body[body_pointer].row - snake::BOARD_HEIGHT;
+                                    end
                                     snake_body[body_pointer].row++;
                                 end
                             snake::DT_LEFT:
                                 begin
-                                    if (snake_body[body_pointer].col==0)
-                                        wall_collision = 1; 
+                                    if (snake_body[body_pointer].col==0) begin
+                                        wall_collision = 1;
+                                        snake_body[body_pointer].col = snake_body[body_pointer].row + snake::BOARD_WIDTH;
+                                    end 
                                     snake_body[body_pointer].col--;
                                 end
                             snake::DT_RIGHT:
                                 begin
-                                   if (snake_body[body_pointer].col==(snake::BOARD_WIDTH-1))
-                                        wall_collision = 1; 
+                                   if (snake_body[body_pointer].col==(snake::BOARD_WIDTH-1)) begin
+                                        wall_collision = 1;
+                                        snake_body[body_pointer].col = snake_body[body_pointer].row - snake::BOARD_WIDTH;
+                                   end
                                     snake_body[body_pointer].col++;
                                 end
                             endcase
@@ -274,9 +283,12 @@ always @(posedge game_clock or negedge low_reset)
                 1:
                     begin
                         // check for wall collisions
-                        if (wall_collision) begin
+                        if (wall_collision && has_walls == 1) begin
                             pc = 0;
                             current_game_state = CGS_GAME_END;
+                        end else if (wall_collision && has_walls == 0) begin
+                            pc++;
+                            wall_collision = 0;
                         end else begin
                             pc++;
                         end
