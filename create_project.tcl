@@ -143,6 +143,8 @@ set files [list \
  "[file normalize "$origin_dir/snake_project.srcs/sources_1/new/vga_controller_source.sv"]"\
  "[file normalize "$origin_dir/snake_project.srcs/sources_1/new/random_source.sv"]"\
  "[file normalize "$origin_dir/snake_project.srcs/sources_1/new/random_header.vh"]"\
+ "[file normalize "$origin_dir/snake_project.srcs/sources_1/new/PS2Receiver.v"]"\
+ "[file normalize "$origin_dir/snake_project.srcs/sources_1/new/debouncer.v"]"\
 ]
 add_files -norecurse -fileset $obj $files
 
