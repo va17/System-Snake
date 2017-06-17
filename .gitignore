@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+snake_project/snake_project.runs/impl_1/init_design.pb
+*.log
+snake_project/snake_project.runs/impl_1/write_bitstream.pb
+snake_project/snake_project.runs/synth_1/vivado.pb
