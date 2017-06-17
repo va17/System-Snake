@@ -8,8 +8,8 @@
 
 class snake;
 
-localparam integer BOARD_WIDTH = 20*2;
-localparam integer BOARD_HEIGHT = 15*2;
+localparam integer BOARD_WIDTH = 40;
+localparam integer BOARD_HEIGHT = 30;
 localparam integer LOC_COL_WIDTH = math::compute_log2(BOARD_WIDTH);
 localparam integer LOC_ROW_WIDTH = math::compute_log2(BOARD_HEIGHT);
 localparam integer SNAKE_BODY_TOTAL = 64;

@@ -46,6 +46,7 @@
 module top_module(
     input PS2_CLK,
     input PS2_DATA,
+    input logic has_walls,
     input logic raw_clock,
     output logic vga_horizontal_synch,
     output logic vga_vertical_synch,
@@ -165,7 +166,8 @@ snake_controller_module snake_controller_inst(
     .request_interface(request_interface),
     .game_board(game_board),
     .score(score),
-    .keycode(keycode));
+    .keycode(keycode[31:0]),
+    .has_walls(has_walls));
 
 endmodule
 
