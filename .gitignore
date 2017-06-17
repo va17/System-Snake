@@ -65,5 +65,7 @@ snake_project/snake_project.srcs/sim_1
 *.vdi
 *.jou
 *.vds
-snake_project/snake_project.runs/synth_1/.Xil/top_module_propImpl.xdc
+snake_project/snake_project.runs
+snake_project/snake_project.hw
+snake_project/snake_project.cache
 *.html
