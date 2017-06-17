@@ -2,8 +2,8 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Sat Jun 17 13:27:11 2017
-# Process ID: 25136
+# Start of session at: Sat Jun 17 14:41:38 2017
+# Process ID: 34616
 # Current directory: C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/top_module.vds

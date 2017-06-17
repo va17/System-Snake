@@ -2,8 +2,8 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Sat Jun 17 13:27:11 2017
-# Process ID: 25136
+# Start of session at: Sat Jun 17 14:41:38 2017
+# Process ID: 34616
 # Current directory: C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1
 # Command line: vivado.exe -log top_module.vds -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file: C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/top_module.vds
@@ -22,29 +22,29 @@ Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23968 
+INFO: Helper process launched with PID 24572 
 WARNING: [Synth 8-1858] constant expression cannot contain a hierarchical identifier [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_source.sv:30]
 WARNING: [Synth 8-1858] constant expression cannot contain a hierarchical identifier [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_source.sv:31]
 WARNING: [Synth 8-1858] constant expression cannot contain a hierarchical identifier [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_header.vh:19]
 WARNING: [Synth 8-1858] constant expression cannot contain a hierarchical identifier [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_header.vh:20]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 343.559 ; gain = 136.629
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 343.629 ; gain = 137.078
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:46]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:94]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:95]
 INFO: [Synth 8-638] synthesizing module 'vga_driver_interface' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_header.vh:65]
 INFO: [Synth 8-256] done synthesizing module 'vga_driver_interface' (0#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_header.vh:65]
 INFO: [Synth 8-638] synthesizing module 'axi4s' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-256] done synthesizing module 'axi4s' (0#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-638] synthesizing module 'axi4s' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-256] done synthesizing module 'axi4s' (0#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_pixel' [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-25136-VITOR-VAIO/realtime/clk_wiz_pixel_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_pixel' (1#1) [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-25136-VITOR-VAIO/realtime/clk_wiz_pixel_stub.v:6]
-INFO: [Synth 8-638] synthesizing module 'step_down_clock_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:563]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_pixel' [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-34616-VITOR-VAIO/realtime/clk_wiz_pixel_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_pixel' (1#1) [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-34616-VITOR-VAIO/realtime/clk_wiz_pixel_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'step_down_clock_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:585]
 	Parameter DESIRED_FREQ bound to: 1000000 - type: integer 
 	Parameter RAW_CLOCK_FREQ bound to: 100000000 - type: integer 
 	Parameter COUNTER_VALUE bound to: 100 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'step_down_clock_module' (2#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:563]
+INFO: [Synth 8-256] done synthesizing module 'step_down_clock_module' (2#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:585]
 INFO: [Synth 8-638] synthesizing module 'vga_controller_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_source.sv:24]
 	Parameter config_[pixel_clock] bound to: 60 - type: integer 
 	Parameter config_[refresh_rate] bound to: 40000000 - type: integer 
@@ -71,54 +71,78 @@ INFO: [Synth 8-638] synthesizing module 'vga_controller_module' [C:/Users/Redwar
 	Parameter COL_PERIOD bound to: 1056 - type: integer 
 	Parameter ROW_PERIOD bound to: 628 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'vga_controller_module' (3#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/vga_controller_source.sv:24]
-INFO: [Synth 8-638] synthesizing module 'snake_painter_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:710]
-INFO: [Synth 8-256] done synthesizing module 'snake_painter_module' (4#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:710]
-INFO: [Synth 8-638] synthesizing module 'acquire_random_position' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:655]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:682]
-WARNING: [Synth 8-5788] Register data_reg in module acquire_random_position is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:686]
-INFO: [Synth 8-256] done synthesizing module 'acquire_random_position' (5#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:655]
+INFO: [Synth 8-638] synthesizing module 'snake_painter_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:732]
+INFO: [Synth 8-256] done synthesizing module 'snake_painter_module' (4#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:732]
+INFO: [Synth 8-638] synthesizing module 'acquire_random_position' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:677]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:704]
+WARNING: [Synth 8-5788] Register data_reg in module acquire_random_position is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:708]
+INFO: [Synth 8-256] done synthesizing module 'acquire_random_position' (5#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:677]
 INFO: [Synth 8-638] synthesizing module 'lfsr16_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/random_source.sv:24]
 INFO: [Synth 8-256] done synthesizing module 'lfsr16_module' (6#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/random_source.sv:24]
-INFO: [Synth 8-638] synthesizing module 'sample_pushbutton_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:525]
+INFO: [Synth 8-638] synthesizing module 'sample_pushbutton_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:547]
 	Parameter WIDTH bound to: 4 - type: integer 
 	Parameter SAMPLE_RATE bound to: 10000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'sample_pushbutton_module' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:525]
-INFO: [Synth 8-638] synthesizing module 'score_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:375]
+INFO: [Synth 8-256] done synthesizing module 'sample_pushbutton_module' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:547]
+INFO: [Synth 8-638] synthesizing module 'score_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:397]
 INFO: [Synth 8-638] synthesizing module 'axi4s' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-256] done synthesizing module 'axi4s' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-638] synthesizing module 'axi4s' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
 INFO: [Synth 8-256] done synthesizing module 'axi4s' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/interface_header.vh:5]
-INFO: [Synth 8-638] synthesizing module 'step_down_clock_module__parameterized0' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:563]
+INFO: [Synth 8-638] synthesizing module 'step_down_clock_module__parameterized0' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:585]
 	Parameter DESIRED_FREQ bound to: 800 - type: integer 
 	Parameter RAW_CLOCK_FREQ bound to: 100000000 - type: integer 
 	Parameter COUNTER_VALUE bound to: 125000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'step_down_clock_module__parameterized0' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:563]
-INFO: [Synth 8-638] synthesizing module 'bcd_to_ssegment_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:419]
+INFO: [Synth 8-256] done synthesizing module 'step_down_clock_module__parameterized0' (7#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:585]
+INFO: [Synth 8-638] synthesizing module 'bcd_to_ssegment_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:441]
 	Parameter SSEGMENT_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'bcd_to_ssegment_module' (8#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:419]
-INFO: [Synth 8-638] synthesizing module 'convert_score_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:453]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:481]
-INFO: [Synth 8-256] done synthesizing module 'convert_score_module' (9#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:453]
+INFO: [Synth 8-256] done synthesizing module 'bcd_to_ssegment_module' (8#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:441]
+INFO: [Synth 8-638] synthesizing module 'convert_score_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:475]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:503]
+INFO: [Synth 8-256] done synthesizing module 'convert_score_module' (9#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:475]
 INFO: [Synth 8-638] synthesizing module 'divide_by_constant' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/random_source.sv:49]
 	Parameter DIVISOR bound to: 10 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/random_source.sv:67]
 INFO: [Synth 8-256] done synthesizing module 'divide_by_constant' (10#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/random_source.sv:49]
-INFO: [Synth 8-256] done synthesizing module 'score_module' (11#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:375]
+INFO: [Synth 8-256] done synthesizing module 'score_module' (11#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:397]
 INFO: [Synth 8-638] synthesizing module 'PS2Receiver' [C:/Users/Redware/System-Snake/snake_project/snake_project.srcs/sources_1/imports/new/PS2Receiver.v:23]
 INFO: [Synth 8-638] synthesizing module 'debouncer' [C:/Users/Redware/System-Snake/snake_project/snake_project.srcs/sources_1/imports/new/debouncer.v:23]
 INFO: [Synth 8-256] done synthesizing module 'debouncer' (12#1) [C:/Users/Redware/System-Snake/snake_project/snake_project.srcs/sources_1/imports/new/debouncer.v:23]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project/snake_project.srcs/sources_1/imports/new/PS2Receiver.v:54]
 INFO: [Synth 8-256] done synthesizing module 'PS2Receiver' (13#1) [C:/Users/Redware/System-Snake/snake_project/snake_project.srcs/sources_1/imports/new/PS2Receiver.v:23]
 INFO: [Synth 8-638] synthesizing module 'snake_controller_module' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:24]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:117]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:141]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:181]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:251]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:74]
-WARNING: [Synth 8-5788] Register snake_tail_reg[col] in module snake_controller_module is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:194]
-WARNING: [Synth 8-5788] Register snake_tail_reg[row] in module snake_controller_module is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:194]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:118]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:142]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:182]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:268]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:75]
+WARNING: [Synth 8-5788] Register snake_tail_reg[col] in module snake_controller_module is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:195]
+WARNING: [Synth 8-5788] Register snake_tail_reg[row] in module snake_controller_module is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:195]
 INFO: [Synth 8-256] done synthesizing module 'snake_controller_module' (14#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:24]
 INFO: [Synth 8-256] done synthesizing module 'top_module' (15#1) [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:46]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[31]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[30]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[29]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[28]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[27]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[26]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[25]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[24]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[23]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[22]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[21]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[20]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[19]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[18]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[17]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[16]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[7]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[6]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[5]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[4]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[3]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[2]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[1]
+WARNING: [Synth 8-3331] design snake_controller_module has unconnected port keycode[0]
 WARNING: [Synth 8-3331] design PS2Receiver has unconnected port game_clock
 WARNING: [Synth 8-3331] design score_module has unconnected port high_score[26]
 WARNING: [Synth 8-3331] design score_module has unconnected port high_score[25]
@@ -195,24 +219,9 @@ WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_int
 WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][18]
 WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][17]
 WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][16]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][15]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][14]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][13]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][12]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][11]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][10]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][9]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][8]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][7]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][6]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][5]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][4]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][3]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][2]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][1]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[row][0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 832.941 ; gain = 626.012
+Finished RTL Elaboration : Time (s): cpu = 00:01:08 ; elapsed = 00:01:16 . Memory (MB): peak = 833.340 ; gain = 626.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -221,44 +230,44 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[26] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[25] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[24] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[23] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[22] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[21] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[20] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[19] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[18] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[17] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[16] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[15] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[14] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[13] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[12] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[11] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[10] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[9] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[8] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[7] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[6] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[5] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[4] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[3] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[2] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[1] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
-WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[0] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:402]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[26] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[25] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[24] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[23] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[22] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[21] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[20] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[19] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[18] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[17] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[16] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[15] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[14] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[13] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[12] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[11] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[10] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[9] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[8] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[7] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[6] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[5] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[4] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[3] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[2] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[1] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
+WARNING: [Synth 8-3295] tying undriven pin convert_score_inst:high_score[0] to constant 0 [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:424]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:24 . Memory (MB): peak = 832.941 ; gain = 626.012
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:13 ; elapsed = 00:01:22 . Memory (MB): peak = 833.340 ; gain = 626.789
 ---------------------------------------------------------------------------------
-WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_pixel' instantiated as 'clk_wiz_pixel_inst' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:101]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'clk_wiz_pixel' instantiated as 'clk_wiz_pixel_inst' [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/top_module.sv:102]
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-25136-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc] for cell 'clk_wiz_pixel_inst'
-Finished Parsing XDC File [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-25136-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc] for cell 'clk_wiz_pixel_inst'
+Parsing XDC File [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-34616-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc] for cell 'clk_wiz_pixel_inst'
+Finished Parsing XDC File [C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-34616-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc] for cell 'clk_wiz_pixel_inst'
 Parsing XDC File [C:/Users/Redware/System-Snake/snake_project.srcs/constrs_1/new/nexysddr_master.xdc]
 Finished Parsing XDC File [C:/Users/Redware/System-Snake/snake_project.srcs/constrs_1/new/nexysddr_master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Redware/System-Snake/snake_project.srcs/constrs_1/new/nexysddr_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_module_propImpl.xdc].
@@ -270,9 +279,9 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1067.043 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1068.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 1067.043 ; gain = 860.113
+Finished Constraint Validation : Time (s): cpu = 00:01:37 ; elapsed = 00:01:47 . Memory (MB): peak = 1068.625 ; gain = 862.074
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
 ---------------------------------------------------------------------------------
@@ -280,17 +289,17 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:41 ; elapsed = 00:01:50 . Memory (MB): peak = 1067.043 ; gain = 860.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:37 ; elapsed = 00:01:47 . Memory (MB): peak = 1068.625 ; gain = 862.074
 ---------------------------------------------------------------------------------
-INFO: Vivado Synthesis caught shared memory exception 'The system cannot find the file specified.'. Continuing without using shared memory (or continuing without helper parallel flow)
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for raw_clock. (constraint file  C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-25136-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for raw_clock. (constraint file  C:/Users/Redware/System-Snake/snake_project/snake_project.runs/synth_1/.Xil/Vivado-34616-VITOR-VAIO/dcp/clk_wiz_pixel_in_context.xdc, line 3).
 Applied set_property DONT_TOUCH = true for clk_wiz_pixel_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:41 ; elapsed = 00:01:51 . Memory (MB): peak = 1067.043 ; gain = 860.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:47 . Memory (MB): peak = 1068.625 ; gain = 862.074
 ---------------------------------------------------------------------------------
+INFO: Vivado Synthesis caught shared memory exception 'The system cannot find the file specified.'. Continuing without using shared memory (or continuing without helper parallel flow)
 INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "down_clock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "check_counters" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -335,8 +344,8 @@ INFO: [Synth 8-5546] ROM "cnt0" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "O1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "cnt1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:213]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:213]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:222]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Redware/System-Snake/snake_project.srcs/sources_1/new/snake_source.sv:222]
 INFO: [Synth 8-802] inferred FSM for state register 'current_game_state_reg' in module 'snake_controller_module'
 INFO: [Synth 8-5545] ROM "snake_body_reg[0][col]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "snake_body_reg[1][col]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -403,6 +412,8 @@ INFO: [Synth 8-5545] ROM "snake_body_reg[61][col]" won't be mapped to RAM becaus
 INFO: [Synth 8-5545] ROM "snake_body_reg[62][col]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "snake_body_reg[63][col]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "new_direction" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "new_direction" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wall_collision" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wall_collision" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wall_collision" won't be mapped to RAM because it is too sparse
@@ -426,52 +437,53 @@ INFO: [Synth 8-5544] ROM "current_game_state" won't be mapped to Block RAM becau
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_game_state_reg' using encoding 'sequential' in module 'snake_controller_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:03 ; elapsed = 00:04:24 . Memory (MB): peak = 1130.016 ; gain = 923.086
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:57 ; elapsed = 00:04:15 . Memory (MB): peak = 1129.398 ; gain = 922.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+------------------------------+------------+----------+
 |      |RTL Partition                 |Replication |Instances |
 +------+------------------------------+------------+----------+
-|1     |snake_controller_module__GB0  |           1|     42126|
-|2     |snake_controller_module__GB1  |           1|     13920|
-|3     |snake_controller_module__GB2  |           1|     16530|
-|4     |snake_controller_module__GB3  |           1|     20880|
-|5     |snake_controller_module__GB4  |           1|     26100|
+|1     |snake_controller_module__GB0  |           1|     46860|
+|2     |snake_controller_module__GB1  |           1|     14790|
+|3     |snake_controller_module__GB2  |           1|     18365|
+|4     |snake_controller_module__GB3  |           1|     22670|
+|5     |snake_controller_module__GB4  |           1|     16025|
 |6     |snake_controller_module__GB5  |           1|     33060|
-|7     |snake_controller_module__GB6  |           1|     37800|
-|8     |snake_controller_module__GB7  |           1|     51079|
-|9     |snake_controller_module__GB8  |           1|     63224|
-|10    |snake_controller_module__GB9  |           1|     62640|
-|11    |snake_controller_module__GB10 |           1|     16530|
-|12    |snake_controller_module__GB11 |           1|     59560|
-|13    |snake_controller_module__GB12 |           1|     11703|
-|14    |snake_controller_module__GB13 |           1|     25780|
-|15    |snake_controller_module__GB14 |           1|     62640|
-|16    |snake_controller_module__GB15 |           1|     15660|
-|17    |snake_controller_module__GB16 |           1|     20010|
-|18    |snake_controller_module__GB17 |           1|     25230|
-|19    |snake_controller_module__GB18 |           1|     60589|
-|20    |snake_controller_module__GB19 |           1|     14790|
-|21    |snake_controller_module__GB20 |           1|     18270|
-|22    |snake_controller_module__GB21 |           1|     14958|
-|23    |snake_controller_module__GB22 |           1|     17610|
-|24    |snake_controller_module__GB23 |           1|     31374|
-|25    |snake_controller_module__GB24 |           1|     39234|
-|26    |snake_controller_module__GB25 |           1|     67233|
-|27    |snake_controller_module__GB26 |           1|     16600|
-|28    |snake_controller_module__GB27 |           1|     21750|
-|29    |snake_controller_module__GB28 |           1|     24360|
-|30    |snake_controller_module__GB29 |           1|     32676|
-|31    |snake_controller_module__GB30 |           1|     41184|
-|32    |snake_controller_module__GB31 |           1|     55450|
-|33    |snake_controller_module__GB32 |           1|     15660|
-|34    |snake_controller_module__GB33 |           1|     20010|
-|35    |snake_controller_module__GB34 |           1|     25396|
-|36    |snake_controller_module__GB35 |           1|     32396|
-|37    |snake_controller_module__GB36 |           1|     40309|
-|38    |snake_controller_module__GB37 |           1|     56956|
-|39    |top_module__GC0               |           1|     52293|
+|7     |snake_controller_module__GB6  |           1|     41850|
+|8     |snake_controller_module__GB7  |           1|     51330|
+|9     |snake_controller_module__GB8  |           1|     64380|
+|10    |snake_controller_module__GB9  |           1|     65250|
+|11    |snake_controller_module__GB10 |           1|     14715|
+|12    |snake_controller_module__GB11 |           1|     11319|
+|13    |snake_controller_module__GB12 |           1|     66120|
+|14    |snake_controller_module__GB13 |           1|     17400|
+|15    |snake_controller_module__GB14 |           1|     20880|
+|16    |snake_controller_module__GB15 |           1|     66120|
+|17    |snake_controller_module__GB16 |           1|     17400|
+|18    |snake_controller_module__GB17 |           1|     20880|
+|19    |snake_controller_module__GB18 |           1|     26100|
+|20    |snake_controller_module__GB19 |           1|     67476|
+|21    |snake_controller_module__GB20 |           1|     16530|
+|22    |snake_controller_module__GB21 |           1|     20880|
+|23    |snake_controller_module__GB22 |           1|     26100|
+|24    |snake_controller_module__GB23 |           1|     32190|
+|25    |snake_controller_module__GB24 |           1|     55275|
+|26    |snake_controller_module__GB25 |           1|     13920|
+|27    |snake_controller_module__GB26 |           1|     17400|
+|28    |snake_controller_module__GB27 |           1|     20880|
+|29    |snake_controller_module__GB28 |           1|     26334|
+|30    |snake_controller_module__GB29 |           1|     34161|
+|31    |snake_controller_module__GB30 |           1|     35667|
+|32    |snake_controller_module__GB31 |           1|     59333|
+|33    |snake_controller_module__GB32 |           1|     14790|
+|34    |snake_controller_module__GB33 |           1|     19428|
+|35    |snake_controller_module__GB34 |           1|     22620|
+|36    |snake_controller_module__GB35 |           1|     29844|
+|37    |snake_controller_module__GB36 |           1|     36234|
+|38    |snake_controller_module__GB37 |           1|     53965|
+|39    |snake_controller_module__GB38 |           1|     13920|
+|40    |top_module__GC0               |           1|     52293|
 +------+------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -481,7 +493,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 15    
 	   2 Input     27 Bit       Adders := 4     
 	   2 Input     16 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 6     
 	   3 Input      8 Bit       Adders := 1     
 	   2 Input      6 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 2     
@@ -509,23 +521,25 @@ Detailed RTL Component Info :
 	   7 Input     20 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 12    
 	   4 Input     16 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 8     
+	   4 Input      8 Bit        Muxes := 5     
 	   7 Input      8 Bit        Muxes := 4     
-	   4 Input      8 Bit        Muxes := 3     
 	  12 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 4     
 	   7 Input      4 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 8     
-	  28 Input      3 Bit        Muxes := 1     
+	  29 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 11    
+	   2 Input      2 Bit        Muxes := 12    
+	   3 Input      2 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1203  
-	   2 Input      1 Bit        Muxes := 4019  
-	   4 Input      1 Bit        Muxes := 1297  
-	   3 Input      1 Bit        Muxes := 64    
+	   2 Input      1 Bit        Muxes := 4023  
+	   4 Input      1 Bit        Muxes := 1298  
+	   3 Input      1 Bit        Muxes := 65    
 	   8 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 1280  
@@ -543,7 +557,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 6     
 	   2 Input     27 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 6     
 	   2 Input      6 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 4     
@@ -558,18 +572,22 @@ Detailed RTL Component Info :
 	   2 Input     27 Bit        Muxes := 1     
 	   7 Input     27 Bit        Muxes := 1     
 	   7 Input     20 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 2     
 	   7 Input      8 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 4     
-	  28 Input      3 Bit        Muxes := 1     
+	  29 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 8     
+	   2 Input      2 Bit        Muxes := 9     
+	   3 Input      2 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1203  
-	   2 Input      1 Bit        Muxes := 3954  
-	   4 Input      1 Bit        Muxes := 1273  
-	   3 Input      1 Bit        Muxes := 63    
+	   2 Input      1 Bit        Muxes := 3958  
+	   4 Input      1 Bit        Muxes := 1274  
+	   3 Input      1 Bit        Muxes := 64    
 	   8 Input      1 Bit        Muxes := 1     
 	   5 Input      1 Bit        Muxes := 1     
 	   7 Input      1 Bit        Muxes := 1280  
@@ -733,10 +751,12 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:04:20 ; elapsed = 00:04:41 . Memory (MB): peak = 1130.016 ; gain = 923.086
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:04:19 ; elapsed = 00:04:38 . Memory (MB): peak = 1129.398 ; gain = 922.848
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5546] ROM "wall_collision" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wall_collision" won't be mapped to RAM because it is too sparse
@@ -747,67 +767,86 @@ INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5546] ROM "digits_pointer" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "score_buff" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "current_state" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][31]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][30]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][29]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][28]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][27]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][26]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][25]
-WARNING: [Synth 8-3331] design snake_painter_module has unconnected port vga_inter\.counters[col][24]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:05:15 ; elapsed = 00:05:38 . Memory (MB): peak = 1130.016 ; gain = 923.086
+Finished Cross Boundary Optimization : Time (s): cpu = 00:05:14 ; elapsed = 00:05:38 . Memory (MB): peak = 1129.398 ; gain = 922.848
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:05:15 ; elapsed = 00:05:38 . Memory (MB): peak = 1130.016 ; gain = 923.086
+Finished Parallel Reinference  : Time (s): cpu = 00:05:14 ; elapsed = 00:05:38 . Memory (MB): peak = 1129.398 ; gain = 922.848
 
 Report RTL Partitions: 
 +------+------------------------------+------------+----------+
 |      |RTL Partition                 |Replication |Instances |
 +------+------------------------------+------------+----------+
-|1     |snake_controller_module__GB0  |           1|     37379|
+|1     |snake_controller_module__GB0  |           1|     42959|
 |2     |snake_controller_module__GB1  |           1|       870|
-|3     |snake_controller_module__GB2  |           1|       870|
-|4     |snake_controller_module__GB3  |           1|       870|
-|5     |snake_controller_module__GB4  |           1|       870|
+|3     |snake_controller_module__GB2  |           1|       965|
+|4     |snake_controller_module__GB3  |           1|       920|
+|5     |snake_controller_module__GB4  |           1|      1865|
 |6     |snake_controller_module__GB5  |           1|       870|
-|7     |snake_controller_module__GB6  |           1|      1260|
-|8     |snake_controller_module__GB7  |           1|      1999|
-|9     |snake_controller_module__GB8  |           1|      2204|
+|7     |snake_controller_module__GB6  |           1|       930|
+|8     |snake_controller_module__GB7  |           1|       870|
+|9     |snake_controller_module__GB8  |           1|       870|
 |10    |snake_controller_module__GB9  |           1|       870|
-|11    |snake_controller_module__GB10 |           1|       870|
-|12    |snake_controller_module__GB11 |           1|      2020|
-|13    |snake_controller_module__GB12 |           1|      1833|
-|14    |snake_controller_module__GB13 |           1|      2290|
+|11    |snake_controller_module__GB10 |           1|      1815|
+|12    |snake_controller_module__GB11 |           1|      5739|
+|13    |snake_controller_module__GB12 |           1|       870|
+|14    |snake_controller_module__GB13 |           1|       870|
 |15    |snake_controller_module__GB14 |           1|       870|
 |16    |snake_controller_module__GB15 |           1|       870|
 |17    |snake_controller_module__GB16 |           1|       870|
 |18    |snake_controller_module__GB17 |           1|       870|
-|19    |snake_controller_module__GB18 |           1|      5779|
-|20    |snake_controller_module__GB19 |           1|       870|
+|19    |snake_controller_module__GB18 |           1|       870|
+|20    |snake_controller_module__GB19 |           1|      5706|
 |21    |snake_controller_module__GB20 |           1|       870|
-|22    |snake_controller_module__GB21 |           1|      1038|
-|23    |snake_controller_module__GB22 |           1|      1080|
-|24    |snake_controller_module__GB23 |           1|       924|
-|25    |snake_controller_module__GB24 |           1|       954|
-|26    |snake_controller_module__GB25 |           1|      5463|
-|27    |snake_controller_module__GB26 |           1|       940|
+|22    |snake_controller_module__GB21 |           1|       870|
+|23    |snake_controller_module__GB22 |           1|       870|
+|24    |snake_controller_module__GB23 |           1|       870|
+|25    |snake_controller_module__GB24 |           1|      5685|
+|26    |snake_controller_module__GB25 |           1|       870|
+|27    |snake_controller_module__GB26 |           1|       870|
 |28    |snake_controller_module__GB27 |           1|       870|
-|29    |snake_controller_module__GB28 |           1|       870|
-|30    |snake_controller_module__GB29 |           1|      1356|
-|31    |snake_controller_module__GB30 |           1|      2034|
-|32    |snake_controller_module__GB31 |           1|     15494|
+|29    |snake_controller_module__GB28 |           1|      1974|
+|30    |snake_controller_module__GB29 |           1|      1101|
+|31    |snake_controller_module__GB30 |           1|      2427|
+|32    |snake_controller_module__GB31 |           1|      5393|
 |33    |snake_controller_module__GB32 |           1|       870|
-|34    |snake_controller_module__GB33 |           1|       870|
-|35    |snake_controller_module__GB34 |           1|      1036|
-|36    |snake_controller_module__GB35 |           1|      1076|
-|37    |snake_controller_module__GB36 |           1|      2029|
-|38    |snake_controller_module__GB37 |           1|      3886|
-|39    |top_module__GC0               |           1|     18042|
+|34    |snake_controller_module__GB33 |           1|      1158|
+|35    |snake_controller_module__GB34 |           1|       870|
+|36    |snake_controller_module__GB35 |           1|      1134|
+|37    |snake_controller_module__GB36 |           1|      1434|
+|38    |snake_controller_module__GB37 |           1|      7855|
+|39    |snake_controller_module__GB38 |           1|       870|
+|40    |top_module__GC0               |           1|     18042|
 +------+------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (snake_controller_insti_37/\high_score_reg[26] )
 INFO: [Synth 8-3886] merging instance 'pc_reg[2]' (FDCE) to 'pc_reg[31]'
 INFO: [Synth 8-3886] merging instance 'pc_reg[3]' (FDCE) to 'pc_reg[31]'
 INFO: [Synth 8-3886] merging instance 'pc_reg[4]' (FDCE) to 'pc_reg[31]'
@@ -838,33 +877,6 @@ INFO: [Synth 8-3886] merging instance 'pc_reg[28]' (FDCE) to 'pc_reg[31]'
 INFO: [Synth 8-3886] merging instance 'pc_reg[29]' (FDCE) to 'pc_reg[31]'
 INFO: [Synth 8-3886] merging instance 'pc_reg[30]' (FDCE) to 'pc_reg[31]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pc_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\high_score_reg[26] )
 INFO: [Synth 8-3886] merging instance 'score_inst/divide_by_ten_inst/current_state_reg[19]' (FDCE) to 'score_inst/divide_by_ten_inst/current_state_reg[31]'
 INFO: [Synth 8-3886] merging instance 'score_inst/divide_by_ten_inst/current_state_reg[18]' (FDCE) to 'score_inst/divide_by_ten_inst/current_state_reg[31]'
 INFO: [Synth 8-3886] merging instance 'score_inst/divide_by_ten_inst/current_state_reg[17]' (FDCE) to 'score_inst/divide_by_ten_inst/current_state_reg[31]'
@@ -1046,53 +1058,54 @@ WARNING: [Synth 8-3332] Sequential element (current_state_reg[23]) is unused and
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:07:01 ; elapsed = 00:07:24 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Area Optimization : Time (s): cpu = 00:06:16 ; elapsed = 00:06:40 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:07:01 ; elapsed = 00:07:24 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Parallel Area Optimization  : Time (s): cpu = 00:06:16 ; elapsed = 00:06:40 . Memory (MB): peak = 1148.957 ; gain = 942.406
 
 Report RTL Partitions: 
 +------+------------------------------+------------+----------+
 |      |RTL Partition                 |Replication |Instances |
 +------+------------------------------+------------+----------+
-|1     |snake_controller_module__GB0  |           1|     14975|
+|1     |snake_controller_module__GB0  |           1|     16380|
 |2     |snake_controller_module__GB1  |           1|        29|
-|3     |snake_controller_module__GB2  |           1|        29|
-|4     |snake_controller_module__GB3  |           1|        29|
-|5     |snake_controller_module__GB4  |           1|        29|
+|3     |snake_controller_module__GB2  |           1|        51|
+|4     |snake_controller_module__GB3  |           1|        42|
+|5     |snake_controller_module__GB4  |           1|        50|
 |6     |snake_controller_module__GB5  |           1|        29|
-|7     |snake_controller_module__GB6  |           1|       355|
-|8     |snake_controller_module__GB7  |           1|       169|
-|9     |snake_controller_module__GB8  |           1|       370|
+|7     |snake_controller_module__GB6  |           1|        30|
+|8     |snake_controller_module__GB7  |           1|        29|
+|9     |snake_controller_module__GB8  |           1|        29|
 |10    |snake_controller_module__GB9  |           1|        29|
-|11    |snake_controller_module__GB10 |           1|        29|
-|12    |snake_controller_module__GB11 |           1|       194|
-|13    |snake_controller_module__GB12 |           1|        58|
-|14    |snake_controller_module__GB13 |           1|       739|
+|11    |snake_controller_module__GB10 |           1|        38|
+|12    |snake_controller_module__GB11 |           1|      2439|
+|13    |snake_controller_module__GB12 |           1|        29|
+|14    |snake_controller_module__GB13 |           1|        29|
 |15    |snake_controller_module__GB14 |           1|        29|
 |16    |snake_controller_module__GB15 |           1|        29|
 |17    |snake_controller_module__GB16 |           1|        29|
 |18    |snake_controller_module__GB17 |           1|        29|
-|19    |snake_controller_module__GB18 |           1|      2124|
-|20    |snake_controller_module__GB19 |           1|        29|
+|19    |snake_controller_module__GB18 |           1|        29|
+|20    |snake_controller_module__GB19 |           1|      2222|
 |21    |snake_controller_module__GB20 |           1|        29|
-|22    |snake_controller_module__GB21 |           1|       170|
-|23    |snake_controller_module__GB22 |           1|       205|
-|24    |snake_controller_module__GB23 |           1|        76|
-|25    |snake_controller_module__GB24 |           1|       101|
-|26    |snake_controller_module__GB25 |           1|      2174|
-|27    |snake_controller_module__GB26 |           1|        77|
+|22    |snake_controller_module__GB21 |           1|        29|
+|23    |snake_controller_module__GB22 |           1|        29|
+|24    |snake_controller_module__GB23 |           1|        29|
+|25    |snake_controller_module__GB24 |           1|       956|
+|26    |snake_controller_module__GB25 |           1|        29|
+|27    |snake_controller_module__GB26 |           1|        29|
 |28    |snake_controller_module__GB27 |           1|        29|
-|29    |snake_controller_module__GB28 |           1|        29|
-|30    |snake_controller_module__GB29 |           1|       311|
-|31    |snake_controller_module__GB30 |           1|       652|
-|32    |snake_controller_module__GB31 |           1|      7798|
+|29    |snake_controller_module__GB28 |           1|       176|
+|30    |snake_controller_module__GB29 |           1|       223|
+|31    |snake_controller_module__GB30 |           1|       243|
+|32    |snake_controller_module__GB31 |           1|       899|
 |33    |snake_controller_module__GB32 |           1|        29|
-|34    |snake_controller_module__GB33 |           1|        29|
-|35    |snake_controller_module__GB34 |           1|       154|
-|36    |snake_controller_module__GB35 |           1|       170|
-|37    |snake_controller_module__GB36 |           1|       133|
-|38    |snake_controller_module__GB37 |           1|       664|
-|39    |top_module__GC0               |           1|      5622|
+|34    |snake_controller_module__GB33 |           1|       270|
+|35    |snake_controller_module__GB34 |           1|        29|
+|36    |snake_controller_module__GB35 |           1|       250|
+|37    |snake_controller_module__GB36 |           1|       371|
+|38    |snake_controller_module__GB37 |           1|      5022|
+|39    |snake_controller_module__GB38 |           1|        29|
+|40    |top_module__GC0               |           1|      5622|
 +------+------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -1103,54 +1116,49 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_pixel_inst/clk_out1' to pin 'clk_wiz_pixel_inst/bbstub_clk_out1/O'
 INFO: [Synth 8-5820] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:07:13 ; elapsed = 00:07:37 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:28 ; elapsed = 00:06:53 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:07:21 ; elapsed = 00:07:45 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Timing Optimization : Time (s): cpu = 00:06:36 ; elapsed = 00:07:01 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+------------------------------+------------+----------+
 |      |RTL Partition                 |Replication |Instances |
 +------+------------------------------+------------+----------+
-|1     |snake_controller_module__GB0  |           1|     13850|
-|2     |snake_controller_module__GB6  |           1|       326|
-|3     |snake_controller_module__GB7  |           1|       135|
-|4     |snake_controller_module__GB8  |           1|       292|
-|5     |snake_controller_module__GB11 |           1|       148|
-|6     |snake_controller_module__GB12 |           1|        27|
-|7     |snake_controller_module__GB13 |           1|       710|
-|8     |snake_controller_module__GB18 |           1|      2095|
-|9     |snake_controller_module__GB21 |           1|       141|
-|10    |snake_controller_module__GB22 |           1|       176|
-|11    |snake_controller_module__GB23 |           1|        40|
-|12    |snake_controller_module__GB24 |           1|        71|
-|13    |snake_controller_module__GB25 |           1|      2145|
-|14    |snake_controller_module__GB26 |           1|        48|
-|15    |snake_controller_module__GB29 |           1|       282|
-|16    |snake_controller_module__GB30 |           1|       623|
-|17    |snake_controller_module__GB31 |           1|      7768|
-|18    |snake_controller_module__GB34 |           1|       122|
-|19    |snake_controller_module__GB35 |           1|       138|
-|20    |snake_controller_module__GB36 |           1|       103|
-|21    |snake_controller_module__GB37 |           1|       635|
-|22    |top_module__GC0               |           1|      5736|
+|1     |snake_controller_module__GB0  |           1|     15810|
+|2     |snake_controller_module__GB2  |           1|        20|
+|3     |snake_controller_module__GB3  |           1|        11|
+|4     |snake_controller_module__GB4  |           1|        20|
+|5     |snake_controller_module__GB10 |           1|         5|
+|6     |snake_controller_module__GB11 |           1|      2409|
+|7     |snake_controller_module__GB19 |           1|      2193|
+|8     |snake_controller_module__GB24 |           1|       877|
+|9     |snake_controller_module__GB28 |           1|       146|
+|10    |snake_controller_module__GB29 |           1|       192|
+|11    |snake_controller_module__GB30 |           1|       212|
+|12    |snake_controller_module__GB31 |           1|       867|
+|13    |snake_controller_module__GB33 |           1|       241|
+|14    |snake_controller_module__GB35 |           1|       221|
+|15    |snake_controller_module__GB36 |           1|       342|
+|16    |snake_controller_module__GB37 |           1|      4993|
+|17    |top_module__GC0               |           1|      5720|
 +------+------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:07:32 ; elapsed = 00:07:56 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Technology Mapping : Time (s): cpu = 00:06:48 ; elapsed = 00:07:12 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
-Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:07:32 ; elapsed = 00:07:56 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:06:48 ; elapsed = 00:07:12 . Memory (MB): peak = 1148.957 ; gain = 942.406
 
 Report RTL Partitions: 
 +------+-----------------------------+------------+----------+
 |      |RTL Partition                |Replication |Instances |
 +------+-----------------------------+------------+----------+
-|1     |snake_controller_module__GB0 |           1|      9902|
+|1     |snake_controller_module__GB0 |           1|      9565|
 +------+-----------------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:07:32 ; elapsed = 00:07:56 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:06:48 ; elapsed = 00:07:12 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -1167,7 +1175,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:07:49 ; elapsed = 00:08:13 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished IO Insertion : Time (s): cpu = 00:06:53 ; elapsed = 00:07:18 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1180,7 +1188,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:07:49 ; elapsed = 00:08:13 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:53 ; elapsed = 00:07:18 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1192,25 +1200,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:51 ; elapsed = 00:08:15 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:55 ; elapsed = 00:07:20 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:07:51 ; elapsed = 00:08:15 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:55 ; elapsed = 00:07:20 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:59 ; elapsed = 00:08:23 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:57 ; elapsed = 00:07:22 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:07:59 ; elapsed = 00:08:23 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:57 ; elapsed = 00:07:22 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1242,20 +1250,20 @@ Report Cell Usage:
 |      |Cell          |Count |
 +------+--------------+------+
 |1     |clk_wiz_pixel |     1|
-|2     |BUFG          |     4|
-|3     |CARRY4        |   250|
-|4     |LUT1          |   431|
-|5     |LUT2          |   776|
-|6     |LUT3          |  2801|
-|7     |LUT4          |  1283|
-|8     |LUT5          |   639|
-|9     |LUT6          |  5768|
-|10    |MUXF7         |   402|
+|2     |BUFG          |     3|
+|3     |CARRY4        |   254|
+|4     |LUT1          |   441|
+|5     |LUT2          |   861|
+|6     |LUT3          |  1024|
+|7     |LUT4          |  2963|
+|8     |LUT5          |   582|
+|9     |LUT6          |  5667|
+|10    |MUXF7         |   434|
 |11    |MUXF8         |   198|
 |12    |SRL16E        |     1|
-|13    |FDRE          |  6754|
+|13    |FDRE          |  6740|
 |14    |FDSE          |     5|
-|15    |IBUF          |     6|
+|15    |IBUF          |     7|
 |16    |OBUF          |    30|
 +------+--------------+------+
 
@@ -1263,31 +1271,31 @@ Report Instance Areas:
 +------+-------------------------------+---------------------------------------+------+
 |      |Instance                       |Module                                 |Cells |
 +------+-------------------------------+---------------------------------------+------+
-|1     |top                            |                                       | 19349|
+|1     |top                            |                                       | 19211|
 |2     |  acquire_random_position_inst |acquire_random_position                |    66|
-|3     |  keyboard                     |PS2Receiver                            |   101|
+|3     |  keyboard                     |PS2Receiver                            |    91|
 |4     |    debounce                   |debouncer                              |    37|
 |5     |  lfsr16_inst                  |lfsr16_module                          |    30|
-|6     |  sample_pushbutton_inst       |sample_pushbutton_module               |   102|
+|6     |  sample_pushbutton_inst       |sample_pushbutton_module               |   100|
 |7     |  score_inst                   |score_module                           |   835|
 |8     |    bcd_to_ssegment_inst       |bcd_to_ssegment_module                 |   104|
 |9     |    convert_score_inst         |convert_score_module                   |   484|
 |10    |    divide_by_ten_inst         |divide_by_constant                     |   162|
 |11    |    step_down_clock_inst       |step_down_clock_module__parameterized0 |    83|
-|12    |  snake_controller_inst        |snake_controller_module                | 17369|
+|12    |  snake_controller_inst        |snake_controller_module                | 17243|
 |13    |  snake_painter_inst           |snake_painter_module                   |   386|
 |14    |  step_down_clock_inst         |step_down_clock_module                 |    83|
 |15    |  vga_controller_inst          |vga_controller_module                  |   336|
 +------+-------------------------------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:59 ; elapsed = 00:08:23 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:57 ; elapsed = 00:07:22 . Memory (MB): peak = 1148.957 ; gain = 942.406
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 164 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:06:25 ; elapsed = 00:08:02 . Memory (MB): peak = 1143.164 ; gain = 643.875
-Synthesis Optimization Complete : Time (s): cpu = 00:07:59 ; elapsed = 00:08:29 . Memory (MB): peak = 1143.164 ; gain = 936.234
+Synthesis Optimization Runtime : Time (s): cpu = 00:05:27 ; elapsed = 00:06:53 . Memory (MB): peak = 1148.957 ; gain = 648.109
+Synthesis Optimization Complete : Time (s): cpu = 00:06:57 ; elapsed = 00:07:23 . Memory (MB): peak = 1148.957 ; gain = 942.406
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 261 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'top_module' is not ideal for floorplanning, since the cellview 'snake_controller_module' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
@@ -1296,8 +1304,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-339 Infos, 238 Warnings, 0 Critical Warnings and 0 Errors encountered.
+343 Infos, 238 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:08:00 ; elapsed = 00:08:26 . Memory (MB): peak = 1143.164 ; gain = 886.406
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.269 . Memory (MB): peak = 1143.164 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 17 13:35:51 2017...
+synth_design: Time (s): cpu = 00:06:57 ; elapsed = 00:07:15 . Memory (MB): peak = 1148.957 ; gain = 892.074
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 1148.957 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 17 14:49:10 2017...

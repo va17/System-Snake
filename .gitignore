@@ -46,5 +46,24 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.log
-snake_project/snake_project.runs
+snake_project/snake_project.runs/
 snake_project/snake_project.srcs/sim_1
+*.wdf
+*.wdf
+*.wpc
+*.xml
+*.rst
+*.log
+*.pb
+*.js
+*.sh
+*.rpx
+*.rpt
+*.dcp
+*.bin
+*.bit
+*.vdi
+*.jou
+*.vds
+snake_project/snake_project.runs/synth_1/.Xil/top_module_propImpl.xdc
+*.html
