@@ -5,6 +5,7 @@
 `include "vga_controller_header.vh"
 `include "interface_header.vh"
 `include "random_header.vh"
+`include "keyboard_header.vh"
 
 class snake;
 

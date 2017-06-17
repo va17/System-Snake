@@ -107,7 +107,7 @@ always @(posedge game_clock or negedge low_reset)
         CGS_WAIT_FOR_START:
             begin
                 // wait until a pushbutton is pressed until starting
-                if (keycode[15:8] == 8'h29) begin
+                if (keycode[15:8] == keyboard::BT_SPACE) begin
                     current_game_state = CGS_GENERATE_SNACK;
                 end else if (any_key_is_pressed) begin
                     current_game_state = CGS_GENERATE_SNACK;
@@ -198,7 +198,7 @@ always @(posedge game_clock or negedge low_reset)
                         end else begin
                             if (up_key_is_pressed) begin
                                 new_direction = snake::DT_UP;
-                            end else if (keycode[15:8] == 8'h1D) begin//w
+                            end else if (keycode[15:8] == keyboard::BT_W) begin//w
                                 if (is_inverted == 1) begin
                                     new_direction = snake::DT_DOWN;
                                 end else if (is_inverted == 0) begin
@@ -206,7 +206,7 @@ always @(posedge game_clock or negedge low_reset)
                                 end
                             end else if (down_key_is_pressed) begin
                                 new_direction = snake::DT_DOWN;
-                            end else if (keycode[15:8] == 8'h1B) begin//s
+                            end else if (keycode[15:8] == keyboard::BT_S) begin//s
                                 if (is_inverted == 1) begin
                                     new_direction = snake::DT_UP;
                                 end else if (is_inverted == 0) begin
@@ -214,7 +214,7 @@ always @(posedge game_clock or negedge low_reset)
                                 end
                             end else if (left_key_is_pressed) begin
                                 new_direction = snake::DT_LEFT;
-                            end else if (keycode[15:8] == 8'h1C) begin//a
+                            end else if (keycode[15:8] == keyboard::BT_A) begin//a
                                 if (is_inverted == 1) begin
                                     new_direction = snake::DT_RIGHT;
                                 end else if (is_inverted == 0) begin
@@ -222,7 +222,7 @@ always @(posedge game_clock or negedge low_reset)
                                 end
                             end else if (right_key_is_pressed) begin
                                 new_direction = snake::DT_RIGHT;
-                            end else if (keycode[15:8] == 8'h23) begin//d
+                            end else if (keycode[15:8] == keyboard::BT_D) begin//d
                                 if (is_inverted == 1) begin
                                     new_direction = snake::DT_LEFT;
                                 end else if (is_inverted == 0) begin
@@ -400,7 +400,7 @@ always @(posedge game_clock or negedge low_reset)
                 game_board[14][11] = snake::BT_SNACK;
                 game_board[14][12] = snake::BT_SNACK;
                 
-                if (keycode[15:8] == 8'h34) begin
+                if (keycode[15:8] == keyboard::BT_G) begin
                     current_game_state = CGS_INITIALIZE;
                 end else if (any_key_is_pressed) begin
                     current_game_state = CGS_INITIALIZE;
@@ -662,34 +662,6 @@ snake_controller_module snake_controller_inst(
 
 
 endmodule
-
-//module test_acquire_random(
-//    input logic game_clock,
-//    input logic low_reset,
-//    output snake::loc_type data_out,
-//    input logic ready,
-//    output logic valid);
-
-//axi4s #(.WORD(snake::loc_type)) request_interface();
-//axi4s #(.WORD(lfsr16::WORD)) random_interface();
-
-//assign data_out = request_interface.data;
-//assign request_interface.ready = ready;
-//assign valid = request_interface.valid;
-
-//acquire_random_position acquire_random_position_inst (
-//    .game_clock(game_clock),
-//    .low_reset(low_reset),
-//    .request(request_interface),
-//    .random(random_interface));
-//lfsr16_module lfsr16_inst (
-//    .clock(game_clock),
-//    .low_reset(low_reset),
-//    .data_out(random_interface));
-
-//endmodule
-
-
 
 module acquire_random_position(
     input logic game_clock,
