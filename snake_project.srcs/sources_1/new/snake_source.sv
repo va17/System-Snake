@@ -31,6 +31,7 @@ module snake_controller_module(
     axi4s.slave request_interface,
     output snake::board_type game_board,
     output snake::score_type score,
+    output snake::score_type high_score,
     input wire [31:0]keycode );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
@@ -58,6 +59,7 @@ always @(posedge game_clock or negedge low_reset)
         current_direction = snake::DT_UP;
         new_direction = snake::DT_UP;
         score = 0;
+        high_score = 0;
         curr_body_total = 0;
         snack = '{0,0};
         pc = 0;
@@ -374,6 +376,7 @@ module score_module(
     input logic raw_clock,
     input logic low_reset,
     input snake::score_type score,
+    input snake::score_type high_score,
     output snake::ssegment_type ssegment,
     output snake::anodes_type anode);
 
@@ -451,6 +454,7 @@ module convert_score_module(
     input logic raw_clock,
     input logic low_reset,
     input snake::score_type score,
+    input snake::score_type high_score,
     output snake::digits_type digits,
     axi4s.master dividend_intf,
     axi4s.slave quotient_intf);
@@ -477,7 +481,14 @@ always @(posedge raw_clock)
         case (current_state)
         CS_SAMPLE_SCORE:
             begin
-                score_buff = score;
+                if(score>high_score) begin
+                    high_score = score;
+                    score_buff = (high_score * 10000) + score;
+                end else if(high_score !=0) begin
+                    score_buff = (high_score * 10000) + score;
+                end else begin
+                    score_buff = score;
+                end
                 digits_buff = 0;
                 digits_pointer = 0;
                 current_state = CS_CONVERT;

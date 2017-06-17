@@ -8,8 +8,8 @@
 
 class snake;
 
-localparam integer BOARD_WIDTH = 20;
-localparam integer BOARD_HEIGHT = 15;
+localparam integer BOARD_WIDTH = 20*2;
+localparam integer BOARD_HEIGHT = 15*2;
 localparam integer LOC_COL_WIDTH = math::compute_log2(BOARD_WIDTH);
 localparam integer LOC_ROW_WIDTH = math::compute_log2(BOARD_HEIGHT);
 localparam integer SNAKE_BODY_TOTAL = 64;
@@ -26,7 +26,7 @@ localparam integer MOVE_PERIODS[MOVE_PERIODS_TOTAL] = '{
     GAME_CLOCK_FREQ/1000*400,GAME_CLOCK_FREQ/1000*250,
     GAME_CLOCK_FREQ/1000*200,GAME_CLOCK_FREQ/1000*150,
     GAME_CLOCK_FREQ/1000*100}; 
-localparam integer SCORE_DIGITS_TOTAL = 3;
+localparam integer SCORE_DIGITS_TOTAL = 8;
 localparam integer SCORE_MAX = (10**SCORE_DIGITS_TOTAL)-1;
 localparam integer SCORE_WIDTH = math::compute_log2(SCORE_MAX);
 localparam integer SCORE_BREAK_POINTS[MOVE_PERIODS_TOTAL] = '{1,2,3,4,8,16,32};
