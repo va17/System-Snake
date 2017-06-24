@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="12" Path="C:/Users/Redware/System-Snake/snake_project/snake_project.xpr">
+<Project Version="7" Minor="12" Path="C:/Users/pedro/Desktop/PSI/System-Snake/snake_project/snake_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="994e5e5816dd4d0cb83e1f7e76d3abb3"/>
@@ -125,6 +125,13 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../snake_project.srcs/sources_1/new/debouncer.v"/>
           <Attr Name="ImportTime" Val="1497702440"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../snake_project.srcs/sources_1/new/pwm_module.v">
+        <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
