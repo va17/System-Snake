@@ -34,7 +34,9 @@ module snake_controller_module(
     output snake::score_type high_score,
     input wire [31:0]keycode,
     input logic has_walls,
-    input logic is_inverted );
+    input logic is_inverted,
+    output logic pwm_audio,
+    output logic aud_sd );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
 
@@ -49,8 +51,10 @@ integer pc;
 integer body_pointer;
 integer move_pointer;
 integer move_counter;
+integer control_loop;
 logic any_key_is_pressed;
 logic wall_collision;
+logic [16:0]pwm_aud;
 
 assign any_key_is_pressed = up_key_is_pressed|down_key_is_pressed|left_key_is_pressed|right_key_is_pressed;
    
@@ -125,6 +129,7 @@ always @(posedge game_clock or negedge low_reset)
                     end
                 1:
                     begin
+                        //aud_sd = 1'b1;
                         if (snake_body[body_pointer]==snack) begin
                             body_pointer = 0;
                             pc = 0;
@@ -316,7 +321,11 @@ always @(posedge game_clock or negedge low_reset)
                     begin
                         // check for snack collision
                         if (head==snack) begin
-                            if (curr_body_total!=(snake::SNAKE_BODY_TOTAL-1)) begin
+                            if (curr_body_total!=(snake::SNAKE_BODY_TOTAL-1)) begin                                
+                                aud_sd = 1'b0;
+                                //foreach (pwm_audio[control_loop]) begin
+                                pwm_aud = 1'b1;//pwm_audio[15];                                 
+                                //end
                                 snake_body[curr_body_total] = snake_tail;
                                 curr_body_total++;
                             end
