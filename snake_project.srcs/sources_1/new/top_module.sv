@@ -53,6 +53,7 @@ module top_module(
     output logic pdm_lrsel_o,
     input logic has_walls,
     input logic is_inverted,
+    input logic full_speed,
     input logic raw_clock,
     output logic vga_horizontal_synch,
     output logic vga_vertical_synch,
@@ -187,6 +188,7 @@ snake_controller_module snake_controller_inst(
     .keycode(keycode[31:0]),
     .has_walls(has_walls),
     .is_inverted(is_inverted),
+    .full_speed(full_speed),
     .pwm_audio(aud_pwm),
     .aud_sd(aud_sd));
 
