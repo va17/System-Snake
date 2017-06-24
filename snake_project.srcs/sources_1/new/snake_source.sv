@@ -35,6 +35,7 @@ module snake_controller_module(
     input wire [31:0]keycode,
     input logic has_walls,
     input logic is_inverted,
+    input logic full_speed,
     output logic pwm_audio,
     output logic aud_sd );
 
@@ -52,6 +53,7 @@ integer body_pointer;
 integer move_pointer;
 integer move_counter;
 integer control_loop;
+integer last_speed;
 logic any_key_is_pressed;
 logic wall_collision;
 logic [16:0]pwm_aud;
@@ -73,6 +75,7 @@ always @(posedge game_clock or negedge low_reset)
         move_pointer = 0;
         move_counter = 0;
         wall_collision = 0;
+        last_speed = 0;
         
         foreach (snake_body[each_body]) snake_body[each_body] = '{0,0};
         foreach (game_board[each_col,each_row]) game_board[each_col][each_row] = snake::BT_EMPTY;
@@ -630,11 +633,19 @@ always @(posedge game_clock or negedge low_reset)
                 2:
                     begin
                         // check for snack collision
+                        if (full_speed==1 && last_speed != 7) begin
+                            last_speed = move_pointer;
+                            move_pointer = 7;
+                        end else if (full_speed==1) begin
+                            move_pointer = 7;
+                        end else begin
+                            move_pointer = last_speed;
+                        end
                         if (head==snack) begin
                             if (curr_body_total!=(snake::SNAKE_BODY_TOTAL-1)) begin                                
                                 aud_sd = 1'b0;
                                 //foreach (pwm_audio[control_loop]) begin
-                                pwm_aud = 1'b1;//pwm_audio[15];                                 
+                                pwm_aud = 1'b1;//pwm_audio[15];
                                 //end
                                 snake_body[curr_body_total] = snake_tail;
                                 curr_body_total++;
@@ -645,8 +656,9 @@ always @(posedge game_clock or negedge low_reset)
                                 score++;
                             end
                             foreach (snake::MOVE_PERIODS[each_period]) begin
-                                if (snake::SCORE_BREAK_POINTS[each_period]==score) begin
+                                if (snake::SCORE_BREAK_POINTS[each_period]==score && full_speed==0) begin
                                     move_pointer = each_period;
+                                    last_speed = each_period;
                                 end
                             end
                             pc = 0;

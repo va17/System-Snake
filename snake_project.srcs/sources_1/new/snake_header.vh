@@ -13,7 +13,7 @@ localparam integer BOARD_WIDTH = 40;
 localparam integer BOARD_HEIGHT = 30;
 localparam integer LOC_COL_WIDTH = math::compute_log2(BOARD_WIDTH);
 localparam integer LOC_ROW_WIDTH = math::compute_log2(BOARD_HEIGHT);
-localparam integer SNAKE_BODY_TOTAL = 64;
+localparam integer SNAKE_BODY_TOTAL = 999;
 localparam integer SNAKE_START_COL = BOARD_WIDTH/2;
 localparam integer SNAKE_START_ROW = BOARD_HEIGHT/2;
 localparam vga::config_type vga_config = vga::possible_configs[vga::_800x600];
@@ -21,16 +21,16 @@ localparam integer PIXELS_PER_BLOCK_WIDTH = vga_config.horizontal.width/BOARD_WI
 localparam integer PIXELS_PER_BLOCK_HEIGHT = vga_config.vertical.width/BOARD_HEIGHT;
 localparam integer GAME_CLOCK_FREQ = 1000000;
 localparam integer RAW_CLOCK_FREQ = 100000000;
-localparam integer MOVE_PERIODS_TOTAL = 7;
+localparam integer MOVE_PERIODS_TOTAL = 8;
 localparam integer MOVE_PERIODS[MOVE_PERIODS_TOTAL] = '{
     GAME_CLOCK_FREQ/1000*500,GAME_CLOCK_FREQ/1000*450,
     GAME_CLOCK_FREQ/1000*400,GAME_CLOCK_FREQ/1000*250,
     GAME_CLOCK_FREQ/1000*200,GAME_CLOCK_FREQ/1000*150,
-    GAME_CLOCK_FREQ/1000*100}; 
-localparam integer SCORE_DIGITS_TOTAL = 8;
+    GAME_CLOCK_FREQ/1000*100,GAME_CLOCK_FREQ/1000*50};
+localparam integer SCORE_DIGITS_TOTAL = 7;
 localparam integer SCORE_MAX = (10**SCORE_DIGITS_TOTAL)-1;
 localparam integer SCORE_WIDTH = math::compute_log2(SCORE_MAX);
-localparam integer SCORE_BREAK_POINTS[MOVE_PERIODS_TOTAL] = '{1,2,3,4,8,16,32};
+localparam integer SCORE_BREAK_POINTS[MOVE_PERIODS_TOTAL] = '{1,2,3,4,8,16,32,64};
 
 typedef enum logic [1:0] {
     BT_EMPTY,BT_SNAKE_BODY,BT_SNACK, BT_END
