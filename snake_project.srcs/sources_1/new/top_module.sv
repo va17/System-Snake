@@ -84,10 +84,12 @@ snake::anodes_type anode;
 
 reg CLK50MHZ=0;    
 wire [31:0]keycode;
-logic [16:0]pwm_audio;
 logic done_ser;
 logic aud_pwm;
 logic en_i;
+wire en_sound;
+wire en_sound_snack;
+wire out_snack;
 
 assign low_reset = 1;
 assign vga_red = vga_pixel.red[7:4];
@@ -167,12 +169,14 @@ PS2Receiver keyboard (
     .keycodeout(keycode[31:0])
     );
     
-//PdmSer pwm_out (
-//    .clk_i(game_clock),
-//    .en_i(en_i),
-//    .done_o(done_ser),
-//    .data_i(pwm_audio[16:0]),
-//    .pwm_audio_o(aud_pwm));
+pwm_module pwm_out (
+        .clk(raw_clock),
+        .vcc(aud_sd),
+        .ampPWM(aud_pwm),
+        .en_sound(en_sound),
+        .en_sound_snack(en_sound_snack),
+        .out_snack(out_snack));
+    
     
     
 snake_controller_module snake_controller_inst(
@@ -189,8 +193,9 @@ snake_controller_module snake_controller_inst(
     .has_walls(has_walls),
     .is_inverted(is_inverted),
     .full_speed(full_speed),
-    .pwm_audio(aud_pwm),
-    .aud_sd(aud_sd));
+    .en_sound(en_sound),
+    .en_sound_snack(en_sound_snack),
+    .out_snack(out_snack));
 
 endmodule
 

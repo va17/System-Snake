@@ -36,8 +36,9 @@ module snake_controller_module(
     input logic has_walls,
     input logic is_inverted,
     input logic full_speed,
-    output logic pwm_audio,
-    output logic aud_sd );
+    output reg en_sound,
+    output reg en_sound_snack,
+    input reg out_snack );
 
 enum {CGS_INITIALIZE,CGS_WAIT_FOR_START,CGS_GENERATE_SNACK,CGS_DRAW,CSG_MOVE_SNAKE,CSG_COLLISION_CHECK,CGS_GAME_END} current_game_state;
 
@@ -56,7 +57,6 @@ integer control_loop;
 integer last_speed;
 logic any_key_is_pressed;
 logic wall_collision;
-logic [16:0]pwm_aud;
 
 assign any_key_is_pressed = up_key_is_pressed|down_key_is_pressed|left_key_is_pressed|right_key_is_pressed;
    
@@ -401,12 +401,14 @@ always @(posedge game_clock or negedge low_reset)
                 score = 0;
                 current_direction = snake::DT_UP;
                 new_direction = snake::DT_UP;
-                
+                en_sound = 0;
+                en_sound_snack = 0;
                 current_game_state = CGS_WAIT_FOR_START;
             end
         CGS_WAIT_FOR_START:
             begin
                 // wait until a pushbutton is pressed until starting
+                en_sound = 0;
                 if (keycode[15:8] == keyboard::BT_SPACE) begin
                     // initialize the snake board
                     foreach (snake_body[each_body]) snake_body[each_body] = '{0,0};
@@ -442,7 +444,6 @@ always @(posedge game_clock or negedge low_reset)
                     end
                 1:
                     begin
-                        //aud_sd = 1'b1;
                         if (snake_body[body_pointer]==snack) begin
                             body_pointer = 0;
                             pc = 0;
@@ -633,6 +634,9 @@ always @(posedge game_clock or negedge low_reset)
                 2:
                     begin
                         // check for snack collision
+                        if (out_snack == 0) begin
+                            en_sound_snack = 0;
+                        end
                         if (full_speed==1 && last_speed != 7) begin
                             last_speed = move_pointer;
                             move_pointer = 7;
@@ -642,11 +646,8 @@ always @(posedge game_clock or negedge low_reset)
                             move_pointer = last_speed;
                         end
                         if (head==snack) begin
-                            if (curr_body_total!=(snake::SNAKE_BODY_TOTAL-1)) begin                                
-                                aud_sd = 1'b0;
-                                //foreach (pwm_audio[control_loop]) begin
-                                pwm_aud = 1'b1;//pwm_audio[15];
-                                //end
+                            if (curr_body_total!=(snake::SNAKE_BODY_TOTAL-1)) begin
+                                en_sound_snack = 1;
                                 snake_body[curr_body_total] = snake_tail;
                                 curr_body_total++;
                             end
@@ -868,6 +869,8 @@ always @(posedge game_clock or negedge low_reset)
                 game_board[16][24] = snake::BT_SNACK;
                 game_board[17][24] = snake::BT_SNACK;
                 game_board[18][24] = snake::BT_SNACK;
+                
+                en_sound = 1;
 
                 if (keycode[15:8] == keyboard::BT_G) begin
                     current_game_state = CGS_INITIALIZE;
